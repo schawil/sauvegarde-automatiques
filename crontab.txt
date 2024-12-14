@@ -1,0 +1,13 @@
+echo "
+# Sauvegardes différentielles : Lundi au samedi à 22h00
+0 22 * * 1-6 /chemin/vers/script_sauvegarde_diff.sh
+
+# Sauvegarde complète hebdomadaire : Dimanche à 23h00
+0 23 * * 0 /chemin/vers/script_sauvegarde_full.sh
+
+# Sauvegarde complète mensuelle : Le premier jour du mois à 1h00
+0 1 1 * * /chemin/vers/script_sauvegarde_full.sh
+
+# Nettoyage des anciennes sauvegardes : Tous les jours à 3h00
+0 3 * * * /chemin/vers/script_nettoyage_backup.sh
+" > crontab.txt
